@@ -51,10 +51,10 @@ class HomePage extends StatelessWidget {
               children: [
               Icon(Icons.home, size: 40,color: Colors.blue.shade600,),
               Icon(Icons.people_outline, size: 40, color: Colors.grey.shade700),
-              Icon(Icons.ondemand_video_outlined, size: 40, color: Colors.grey.shade700),
-              Icon(Icons.maps_home_work_outlined, size: 40, color: Colors.grey.shade700),
-              Icon(Icons.notifications_none_outlined, size: 40, color: Colors.grey.shade700),
-              Icon(Icons.menu, size: 40, color: Colors.grey.shade700),
+              Icon(Icons.ondemand_video_outlined, size: 35, color: Colors.grey.shade700),
+              Icon(Icons.maps_home_work_outlined, size: 35, color: Colors.grey.shade700),
+              Icon(Icons.notifications_none_outlined, size: 38, color: Colors.grey.shade700),
+              Icon(Icons.menu, size: 38, color: Colors.grey.shade700),
 
 
 
@@ -64,6 +64,51 @@ class HomePage extends StatelessWidget {
             Divider(
               color: Colors.grey.shade500
             ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical:8.0),
+              child: Row(children: [
+                CircleAvatar(
+                  radius: 25,
+                  backgroundImage: NetworkImage('https://tse1.mm.bing.net/th/id/OIP.5E1nwnhAzODo8pYnFvKtXgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'),
+                ),
+                SizedBox(width:15),
+                Expanded(
+                  child: TextField(
+                    cursorColor: Colors.grey.shade600,
+                    decoration: InputDecoration(
+                      hintText: 'Whats on your mind?',
+                      
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                        borderSide: BorderSide(
+                          color: Colors.grey.shade300,
+                          width: 2.0
+              
+                        )
+                       
+                      
+                    
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                        borderSide: BorderSide(
+                          color: Colors.grey.shade300,
+                          width: 2.0
+                        )
+                      )
+              
+                    ),
+                    
+                  
+                  ),
+                ),
+              
+              
+              ],),
+            ),
+           
+            Divider(),
 
             
           
