@@ -109,6 +109,36 @@ class HomePage extends StatelessWidget {
             ),
            
             Divider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+              Row(
+                children: [
+                  Icon(Icons.video_call, color: Colors.red, size: 35),
+                  Text('Live', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600))
+
+                ],
+
+              ),
+                  Row(
+                children: [
+                  Icon(Icons.image, color: Colors.green, size: 30),
+                  Text('Photo', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600))
+                  
+                ],
+
+              ),
+                  Row(
+                children: [
+                  Icon(Icons.face, color: Colors.amber.shade600, size: 30),
+                  Text('Feeling/Activity', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600))
+                  
+                ],
+
+              )
+
+
+            ],)
 
             
           
