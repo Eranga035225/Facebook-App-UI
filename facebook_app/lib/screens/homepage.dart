@@ -8,11 +8,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(children: [
-          
-            Row(children: [
+        child: Column(children: [
+        
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(children: [
               Text('facebook', style: TextStyle(color: Colors.blue, fontSize: 30, fontWeight: FontWeight.bold )),
               Spacer(),
               IconButton(
@@ -40,12 +40,15 @@ class HomePage extends StatelessWidget {
                  
                  ),
               
-          
+                    
             ],),
-            SizedBox(height: 10,),
-
-
-            Row(
+          ),
+          SizedBox(height: 10,),
+        
+        
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               
               children: [
@@ -55,99 +58,109 @@ class HomePage extends StatelessWidget {
               Icon(Icons.maps_home_work_outlined, size: 35, color: Colors.grey.shade700),
               Icon(Icons.notifications_none_outlined, size: 38, color: Colors.grey.shade700),
               Icon(Icons.menu, size: 38, color: Colors.grey.shade700),
-
-
-
-
-
-            ],),
-            Divider(
-              color: Colors.grey.shade500
-            ),
-
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical:8.0),
-              child: Row(children: [
-                CircleAvatar(
-                  radius: 25,
-                  backgroundImage: NetworkImage('https://tse1.mm.bing.net/th/id/OIP.5E1nwnhAzODo8pYnFvKtXgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'),
-                ),
-                SizedBox(width:15),
-                Expanded(
-                  child: TextField(
-                    cursorColor: Colors.grey.shade600,
-                    decoration: InputDecoration(
-                      hintText: 'Whats on your mind?',
-                      
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0),
-                        borderSide: BorderSide(
-                          color: Colors.grey.shade300,
-                          width: 2.0
-              
-                        )
-                       
-                      
                     
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(50.0),
-                        borderSide: BorderSide(
-                          color: Colors.grey.shade300,
-                          width: 2.0
-                        )
+                    
+                    
+                    
+                    
+            ],),
+          ),
+          Divider(
+            color: Colors.grey.shade500
+          ),
+        
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical:8.0,horizontal: 8),
+            child: Row(children: [
+              CircleAvatar(
+                radius: 25,
+                backgroundImage: NetworkImage('https://tse1.mm.bing.net/th/id/OIP.5E1nwnhAzODo8pYnFvKtXgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'),
+              ),
+              SizedBox(width:15),
+              Expanded(
+                child: TextField(
+                  cursorColor: Colors.grey.shade600,
+                  decoration: InputDecoration(
+                    hintText: 'What\'s on your mind?',
+                    
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                      borderSide: BorderSide(
+                        color: Colors.grey.shade300,
+                        width: 2.0
+            
                       )
-              
-                    ),
+                     
                     
                   
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50.0),
+                      borderSide: BorderSide(
+                        color: Colors.grey.shade300,
+                        width: 2.0
+                      )
+                    )
+            
                   ),
+                  
+                
                 ),
-              
-              
-              ],),
-            ),
-           
-            Divider(),
-            Row(
+              ),
+            
+            
+            ],),
+          ),
+         
+          Divider(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
               Row(
                 children: [
-                  Icon(Icons.video_call, color: Colors.red, size: 35),
-                  Text('Live', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600))
-
+                  Icon(Icons.video_call, color: Colors.red, size: 32),
+                   SizedBox(width:3),
+                  Text('Live', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600))
+                    
                 ],
-
+                    
               ),
                   Row(
                 children: [
-                  Icon(Icons.image, color: Colors.green, size: 30),
-                  Text('Photo', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600))
+                  Icon(Icons.image, color: Colors.green, size: 28),
+                   SizedBox(width:3),
+                  Text('Photo', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600))
                   
                 ],
-
+                    
               ),
                   Row(
                 children: [
-                  Icon(Icons.face, color: Colors.amber.shade600, size: 30),
-                  Text('Feeling/Activity', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600))
+                  Icon(Icons.face, color: Colors.amber.shade600, size: 28),
+                  SizedBox(width:5),
+                  Text('Feeling/Activity', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600))
                   
                 ],
-
+                    
               )
-
-
-            ],)
-
-            
+                    
+                    
+            ],),
+          ),
+          Divider(
+            thickness: 8,
+            color: Colors.grey.shade500
+          )
+        
           
-          
-          
-          
-          
-          ],),
-        ),
+        
+        
+        
+        
+        
+        ],),
       )
       
       
