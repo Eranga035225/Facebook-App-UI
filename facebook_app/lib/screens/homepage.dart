@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
             child: Row(children: [
               CircleAvatar(
                 radius: 25,
-                backgroundImage: NetworkImage('https://tse1.mm.bing.net/th/id/OIP.5E1nwnhAzODo8pYnFvKtXgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'),
+                backgroundImage: NetworkImage(DemoData.profilePic),
               ),
               SizedBox(width:15),
               Expanded(
@@ -168,13 +168,17 @@ class HomePage extends StatelessWidget {
                 final story = DemoData.stories[index];
                return  Padding(
                  padding: const EdgeInsets.all(4.0),
-                 child: Container(
+                 child: index !=0 ? Container(
                     width:150,
                     height:210,
+
                     
                     decoration: BoxDecoration(
                       color: Colors.grey,
                       borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        color: Colors.grey
+                      ),
                       image: DecorationImage(image: NetworkImage(story.story), fit: BoxFit.cover),
 
                     ),
@@ -200,6 +204,64 @@ class HomePage extends StatelessWidget {
 
 
                     )
+                  ) : Container(
+                    width: 150,
+                    height: 210,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(
+                        color: Colors.grey
+                      )
+                    ),
+                    child: Stack(
+                      children: [
+                        SizedBox(
+                          width:150,
+                          height:160,
+                          child : Stack(
+                            children: [
+                              Container(
+                                width:150,
+                                height:135,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey,
+                                  image: DecorationImage(image: NetworkImage(DemoData.profilePic), fit: BoxFit.cover),
+                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+                                  
+                                ),
+                              ),
+
+                              Align(alignment: Alignment.bottomCenter,
+                              child: CircleAvatar(
+                                radius:25,
+                                backgroundColor: Colors.blue,
+                                child: Icon(Icons.add, color: Colors.white)
+
+                              ))
+
+                            ],
+                          ),
+
+
+                        ),
+
+                        Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text('Create Story', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),),
+                        ),
+                        
+                        
+                        
+                        )
+
+
+
+
+                      ],
+                    )
+
                   ),
                );
             
