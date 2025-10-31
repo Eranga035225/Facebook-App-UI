@@ -1,3 +1,4 @@
+import 'package:facebook_app/data/demo_data.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -116,7 +117,7 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
               Row(
                 children: [
@@ -152,6 +153,61 @@ class HomePage extends StatelessWidget {
           Divider(
             thickness: 8,
             color: Colors.grey.shade500
+          ),
+
+          SizedBox(
+            height:10
+          ),
+
+          SizedBox(
+            height:218,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount:DemoData.stories.length,
+              itemBuilder:(context, index) {
+                final story = DemoData.stories[index];
+               return  Padding(
+                 padding: const EdgeInsets.all(4.0),
+                 child: Container(
+                    width:150,
+                    height:210,
+                    
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(15),
+                      image: DecorationImage(image: NetworkImage(story.story), fit: BoxFit.cover),
+
+                    ),
+
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          top: 8,
+                          left: 8,
+                          child: CircleAvatar(
+                            radius:27,
+                            backgroundColor: Colors.blue,
+                            child: CircleAvatar(
+                              backgroundColor: Colors.grey,
+                              radius: 24,
+                              backgroundImage: NetworkImage(story.profilePicture),
+                            )
+                          ),
+                        )
+
+
+                      ]
+
+
+                    )
+                  ),
+               );
+            
+              },
+            
+            
+            
+            ),
           )
         
           
