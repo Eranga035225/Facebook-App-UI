@@ -1,13 +1,27 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-HomePage({super.key});
+ const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      //remove debug icon in the app
+      body: SafeArea(
+        child: Column(children: [
+        
+          Row(children: [
+            Text('facebook', style: TextStyle(color: Colors.blue, ))
+        
+          ],)
+          
+        
+        
+        
+        
+        
+        ],),
+      )
       
       
       
