@@ -30,6 +30,7 @@ class HomePage extends StatelessWidget {
               thickness: 8,
               color: Colors.grey.shade500
             ),
+           
           
             SizedBox(
               height:10
@@ -40,7 +41,35 @@ class HomePage extends StatelessWidget {
           
             SizedBox(height:8),
             Divider(thickness: 8, color: Colors.grey.shade500,),
-            ListView.builder(
+            PostListView(),
+           
+            
+          
+          
+          
+          
+          
+          ],),
+        ),
+      )
+      
+      
+      
+
+
+
+
+    );
+  }
+}
+
+
+class PostListView extends StatelessWidget {
+  const PostListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  ListView.builder(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemCount: DemoData.posts.length,
@@ -175,24 +204,7 @@ class HomePage extends StatelessWidget {
               }
             )
           
-          
-            
-          
-          
-          
-          
-          
-          ],),
-        ),
-      )
-      
-      
-      
-
-
-
-
-    );
+          ;
   }
 }
 
