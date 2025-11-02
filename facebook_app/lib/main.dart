@@ -1,4 +1,3 @@
-import 'package:facebook_app/screens/story_view_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/homepage.dart';
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: StoryViewScreen(),
+      home: HomePage(),
     );
 
     
