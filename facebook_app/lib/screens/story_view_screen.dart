@@ -1,14 +1,21 @@
 import 'package:facebook_app/data/demo_data.dart';
 import 'package:flutter/material.dart';
 
+import '../models/story_model.dart';
+
 class StoryViewScreen extends StatefulWidget {
-  const StoryViewScreen({super.key});
+
+   StoryModel story;
+   StoryViewScreen({super.key, required this.story});
 
   @override
   State<StoryViewScreen> createState() => _StoryViewScreenState();
 }
 
 class _StoryViewScreenState extends State<StoryViewScreen> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +24,7 @@ class _StoryViewScreenState extends State<StoryViewScreen> {
         children: [
           Align(
             alignment: Alignment.center,
-            child: Image.network(DemoData.stories[1].story,),),
+            child: Image.network(widget.story.story),),
             Align(alignment: Alignment.bottomCenter,
             child: SafeArea(child: Padding(
               padding: const EdgeInsets.all(8.0),
