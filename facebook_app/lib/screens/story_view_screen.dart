@@ -5,7 +5,7 @@ import '../models/story_model.dart';
 
 class StoryViewScreen extends StatefulWidget {
 
-   StoryModel story;
+   final StoryModel story;
    StoryViewScreen({super.key, required this.story});
 
   @override
@@ -24,7 +24,7 @@ class _StoryViewScreenState extends State<StoryViewScreen> {
         children: [
           Align(
             alignment: Alignment.center,
-            child: Image.network(widget.story.story),),
+            child: Image.network(widget.story.story, width:MediaQuery.sizeOf(context).width, fit: BoxFit.cover),),
             Align(alignment: Alignment.bottomCenter,
             child: SafeArea(child: Padding(
               padding: const EdgeInsets.all(8.0),
