@@ -22,6 +22,7 @@ class _StoryViewScreenState extends State<StoryViewScreen> {
       backgroundColor:Colors.black,
       body: Stack(
         children: [
+          SafeArea(child: BackButton()),
           Align(
             alignment: Alignment.center,
             child: Image.network(widget.story.story, width:MediaQuery.sizeOf(context).width, fit: BoxFit.cover),),
