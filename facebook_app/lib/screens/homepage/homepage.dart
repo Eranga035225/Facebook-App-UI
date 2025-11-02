@@ -22,50 +22,27 @@ class HomePage extends StatelessWidget {
           
             CustomAppBar(),
             // SizedBox(height: 10,),
-          
-          
             CustomTabBar(),
             Divider(
               color: Colors.grey.shade500
             ),
-          
             PostPublishSpace(),
-           
             Divider(),
             HomeOptionBar(),
             Divider(
               thickness: 8,
               color: Colors.grey.shade500
             ),
-           
-          
             SizedBox(
               height:10
             ),
-          
             StoryList(),
-          
-          
             SizedBox(height:8),
             Divider(thickness: 8, color: Colors.grey.shade500,),
             PostListView(),
-           
-            
-          
-          
-          
-          
-          
           ],),
         ),
       )
-      
-      
-      
-
-
-
-
     );
   }
 }
