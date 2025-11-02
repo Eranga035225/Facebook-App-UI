@@ -22,11 +22,15 @@ class _StoryViewScreenState extends State<StoryViewScreen> {
       backgroundColor:Colors.black,
       body: Stack(
         children: [
-          SafeArea(child: BackButton()),
+          
           Align(
             alignment: Alignment.center,
-            child: Image.network(widget.story.story, width:MediaQuery.sizeOf(context).width, fit: BoxFit.cover),),
-            Align(alignment: Alignment.bottomCenter,
+            child: GestureDetector(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              child: Image.network(widget.story.story, width:MediaQuery.sizeOf(context).width, fit: BoxFit.cover)),),
+          Align(alignment: Alignment.bottomCenter,
             child: SafeArea(child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
